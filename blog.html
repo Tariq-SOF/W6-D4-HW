@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+        .box {
+          width: 95% ;
+          height:75vh ;
+          background-color: #fff;
+          padding: 20px;
+          margin: 12px;
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction:row;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .navbar{
+        width: 100%;
+        height: 10vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        margin-top: 8px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        #text{
+          width: 40%; 
+          height: 200px;
+        }
+        .divpro{
+          width: 40%;
+          height: 200px;
+          border-style: solid;
+          border-width: 1px;
+
+        }
+        .button{
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          background-color: rgba(247, 242, 242, 0.374);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          margin-top: 20px;
+        }
+        .buut{
+          display: flex;
+          flex-direction:column;
+        }
+  </style>
+  <body>
+    <nav class="navbar">
+    
+        <h1 style="text-align: center;padding-top: 20px;">Hello <span id="username"></span></h1>
+    
+    </nav>
+  <div class="box">
+    <textarea id="text" rows="4" cols="50"></textarea>
+    <div class="buut">
+      <button id="butninset" class="button">inset</button>
+      <button id="butndelet" class="button" >delet</button>
+    </div>
+    <div class="divpro">
+      <p class="prograf"></p>
+    </div>
+  </div>
+
+
+
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let username = localStorage.getItem("username");
+        let usernameElement = document.getElementById("username");
+        usernameElement.textContent = username;
+      });
+
+      let text = document.getElementById("text");
+      let prograf = document.getElementsByClassName("prograf")[0];
+      let butninset = document.getElementById("butninset");
+      let butndelet = document.getElementById("butndelet");
+
+  
+
+      butninset.addEventListener("click", function() {
+        prograf.textContent = text.value;
+      });
+
+      butndelet.addEventListener("click", function() {
+        prograf.textContent = "";
+      });
+
+
+    </script>
+  </body>
+</html>
