@@ -3,7 +3,7 @@
 
 # My projects
 
-To access the website, click on the following:[website](https://tariq-sof.github.io/W6-D4-HW/)
+To access the website, click on the following:  [website](https://tariq-sof.github.io/W6-D4-HW/)
 
 ## License
 
